@@ -9,6 +9,17 @@
     <meta property="og:title" content="Каталог винила — VinylShop">
     <meta property="og:description" content="Выбирайте пластинки любимых исполнителей в каталоге VinylShop.">
     <title>Каталог винила — VinylShop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;700&family=Unbounded:wght@600;800&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;700&family=Unbounded:wght@600;800&display=swap"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;700&family=Unbounded:wght@600;800&display=swap">
+    </noscript>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <script src="js/main.js" defer></script>
@@ -50,20 +61,22 @@
                 <form class="filters-form" action="#" method="get">
                     <fieldset class="filters-form__group">
                         <legend class="filters-form__legend">Жанр музыки</legend>
+                        <!-- Радиокнопки: выбор жанра взаимоисключающий,
+                             «Все направления» не может конфликтовать с конкретным жанром -->
                         <label class="filters-form__label">
-                            <input class="filters-form__checkbox" type="checkbox" name="genre" value="all" checked>
+                            <input class="filters-form__radio" type="radio" name="genre" value="all" checked>
                             Все направления
                         </label>
                         <label class="filters-form__label">
-                            <input class="filters-form__checkbox" type="checkbox" name="genre" value="russian-rock">
+                            <input class="filters-form__radio" type="radio" name="genre" value="russian-rock">
                             Русский рок и панк
                         </label>
                         <label class="filters-form__label">
-                            <input class="filters-form__checkbox" type="checkbox" name="genre" value="rap">
+                            <input class="filters-form__radio" type="radio" name="genre" value="rap">
                             Рэп и хип-хоп
                         </label>
                         <label class="filters-form__label">
-                            <input class="filters-form__checkbox" type="checkbox" name="genre" value="pop">
+                            <input class="filters-form__radio" type="radio" name="genre" value="pop">
                             Поп и эстрада
                         </label>
                     </fieldset>
@@ -91,7 +104,7 @@
                         <span class="product-card__badge product-card__badge--featured">Хит</span>
                         <div class="product-card__image-wrapper">
                             <img class="product-card__image" src="images/album-1.webp"
-                                alt="Обложка альбома Кишлак — СХИК2" loading="lazy">
+                                alt="Обложка альбома Кишлак — СХИК2" loading="lazy" width="400" height="400">
                         </div>
                         <h3 class="product-card__title">СХИК2</h3>
                         <p class="product-card__description">Кишлак (2023) — Поп-рэп / Панк</p>
@@ -111,7 +124,8 @@
                         <span class="product-card__badge product-card__badge--discount">-15%</span>
                         <div class="product-card__image-wrapper">
                             <img class="product-card__image" src="images/album-2.webp"
-                                alt="Обложка альбома Бесплатный Автобус — Мы убили сон" loading="lazy">
+                                alt="Обложка альбома Бесплатный Автобус — Мы убили сон" loading="lazy" width="400"
+                                height="400">
                         </div>
                         <h3 class="product-card__title">Мы убили сон</h3>
                         <p class="product-card__description">Бесплатный Автобус (2021) — Альтернатива / Поп</p>
@@ -131,7 +145,7 @@
                         <span class="product-card__badge product-card__badge--new">New</span>
                         <div class="product-card__image-wrapper">
                             <img class="product-card__image" src="images/album-3.webp"
-                                alt="Обложка альбома Три дня дождя — Байполар" loading="lazy">
+                                alt="Обложка альбома Три дня дождя — Байполар" loading="lazy" width="400" height="400">
                         </div>
                         <h3 class="product-card__title">Байполар</h3>
                         <p class="product-card__description">Три дня дождя (2022) — Альтернативный рок / Поп-рок</p>
@@ -150,7 +164,8 @@
                     <article class="product-card">
                         <div class="product-card__image-wrapper">
                             <img class="product-card__image" src="images/album-4.webp"
-                                alt="Обложка альбома Король и Шут — Будь как дома, Путник…" loading="lazy">
+                                alt="Обложка альбома Король и Шут — Будь как дома, Путник…" loading="lazy" width="400"
+                                height="400">
                         </div>
                         <h3 class="product-card__title">Будь как дома, Путник…</h3>
                         <p class="product-card__description">Король и Шут (1997) — Хоррор-панк / Фолк-рок</p>
@@ -169,7 +184,7 @@
                     <article class="product-card">
                         <div class="product-card__image-wrapper">
                             <img class="product-card__image" src="images/album-5.webp"
-                                alt="Обложка альбома Noize MC — Новый альбом" loading="lazy">
+                                alt="Обложка альбома Noize MC — Новый альбом" loading="lazy" width="400" height="400">
                         </div>
                         <h3 class="product-card__title">Новый альбом</h3>
                         <p class="product-card__description">Noize MC (2012) — Рэп-рок / Альтернатива</p>
@@ -188,7 +203,7 @@
                     <article class="product-card">
                         <div class="product-card__image-wrapper">
                             <img class="product-card__image" src="images/album-6.webp"
-                                alt="Обложка альбома Юрия Шатунова — Детство" loading="lazy">
+                                alt="Обложка альбома Юрия Шатунова — Детство" loading="lazy" width="400" height="400">
                         </div>
                         <h3 class="product-card__title">Детство</h3>
                         <p class="product-card__description">Юрий Шатунов (1991) — Поп / Эстрада</p>

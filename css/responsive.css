@@ -1,32 +1,38 @@
 /* ==========================================================================
    Адаптивные стили для контрольной работы №3 (kr3-responsive-shop)
    Подход: Mobile First.
-   Базовые правила рассчитаны на экраны мобильных телефонов.
-   Расширения для планшетов и desktop задаются через min-width медиазапросы.
+
+   ВАЖНО: файл подключается ПОСЛЕ style.css и НЕ дублирует глобальный сброс
+   (box-sizing, body margin, шрифты, scroll-behavior) — только адаптивные
+   переопределения, чтобы не ломать каскад.
    ========================================================================== */
 
-/* 1. Базовый сброс и защита от горизонтального переполнения */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 20px;
-}
-
+/* 1. Защита от горизонтального переполнения */
 body {
   overflow-x: hidden;
 }
 
+/* На мобильных убираем padding у main: все контейнеры ниже
+   самостоятельно ограничивают ширину через width: min(...) и --gutter,
+   иначе отступы дублируются (padding у main + gutter у секций). */
+main {
+  padding: 0;
+  flex: 1;
+}
+
+/* Медиа-элементы: max-width применяем только к img/video.
+   <picture> — строчная обёртка, max-width/height к ней по спецификации
+   не применяются и могут вызвать схлопывание высоты в WebKit/Blink. */
 img,
-picture,
 video {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+picture {
+  display: block;
+  width: 100%;
 }
 
 /* 2. Адаптивные контейнеры */
@@ -37,13 +43,20 @@ video {
 .order-layout,
 .aside-info,
 .success-message {
-  width: min(100% - 32px, var(--container-width, 1100px));
+  width: min(100% - 2 * var(--gutter, 1rem), var(--container, 1200px));
   margin-inline: auto;
 }
 
 /* 3. Шапка и навигация: Mobile First */
 .site-header {
-  position: static; /* На мобильных оставляем статичной для экономии места */
+  position: static;
+  /* На мобильных оставляем статичной для экономии места */
+}
+
+/* На мобильных шапка статична — якорям достаточно небольшого отступа.
+   На 768px+ шапка становится sticky, и отступ увеличивается до 90px. */
+html {
+  scroll-padding-top: 20px;
 }
 
 .site-header__inner {
@@ -126,7 +139,8 @@ video {
 .product-card__image-wrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1; /* Квадратный конверт для виниловой пластинки */
+  aspect-ratio: 1 / 1;
+  /* Квадратный конверт для виниловой пластинки */
   overflow: hidden;
   border-radius: var(--radius-sm);
   background-color: var(--color-surface);
@@ -189,6 +203,14 @@ video {
   aspect-ratio: 1 / 1;
 }
 
+/* <picture> тянется на всю площадь плейсхолдера, чтобы height: 100%
+   у вложенного img корректно разрешался */
+.product-details__placeholder picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .product-details__placeholder img {
   width: 100%;
   height: 100%;
@@ -215,7 +237,8 @@ video {
 
 .product-table {
   width: 100%;
-  min-width: 540px; /* Фиксированная минимальная ширина для избежания смятия ячеек */
+  min-width: 540px;
+  /* Фиксированная минимальная ширина для избежания смятия ячеек */
   margin-top: 0;
   border: none;
 }
@@ -230,8 +253,10 @@ video {
 .order-form__input,
 .order-form__select,
 .order-form__textarea {
-  min-height: 44px; /* Удобный размер для тапа пальцем */
-  font-size: 16px; /* Защита от авто-зума в Safari на iOS */
+  min-height: 44px;
+  /* Удобный размер для тапа пальцем */
+  font-size: 16px;
+  /* Защита от авто-зума в Safari на iOS */
 }
 
 .order-form__actions {
@@ -293,6 +318,7 @@ video {
     flex-wrap: wrap;
     justify-content: center;
     width: auto;
+    margin: 0;
   }
 
   .site-nav__item {
@@ -340,6 +366,14 @@ video {
     right: 24px;
     width: 44px;
     height: 44px;
+  }
+
+  .site-header__inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-lg);
+    padding-inline: var(--gutter);
   }
 }
 

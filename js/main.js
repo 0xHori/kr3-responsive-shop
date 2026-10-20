@@ -95,3 +95,19 @@ if (pageOrderForm) {
     pageOrderForm.reset();
   });
 }
+
+// Закрытие модального окна при клике на backdrop (вне контента формы)
+if (orderDialog) {
+  orderDialog.addEventListener('click', (event) => {
+    const rect = orderDialog.getBoundingClientRect();
+    const isInDialog = (
+      rect.top <= event.clientY &&
+      event.clientY <= rect.top + rect.height &&
+      rect.left <= event.clientX &&
+      event.clientX <= rect.left + rect.width
+    );
+    if (!isInDialog) {
+      orderDialog.close();
+    }
+  });
+}

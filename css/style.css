@@ -19,7 +19,7 @@
 
   /* Бейджи */
   --color-badge-hit: #d32f2f;
-  --color-badge-discount: #e65100;
+  --color-badge-discount: #bf360c;
   --color-badge-new: #2e7d32;
 
   /* Отступы */
@@ -255,7 +255,7 @@ a:focus-visible {
   justify-content: center;
   text-align: center;
   color: var(--color-white);
-  background-image: url("../images/preview.png");
+  background-image: url("../images/preview.webp");
   background-size: cover;
   background-position: center;
 }
@@ -693,4 +693,60 @@ a:focus-visible {
 .scroll-top-button:focus-visible {
   outline: 2px solid var(--color-text);
   outline-offset: 3px;
+}
+
+
+/* ==========================================================================
+   Стили доступности (A11y / Практика №13)
+   ========================================================================== */
+
+/* Ссылка быстрого перехода к контенту */
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -120px;
+  z-index: 2000;
+  padding: 10px 16px;
+  color: var(--color-white);
+  background-color: var(--color-text);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-weight: 700;
+  transition: top var(--transition-fast, 0.2s ease);
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  top: 16px;
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+/* Видимый контур фокуса */
+:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+/* Дополнительные стили для заголовков строк в таблицах характеристик */
+.product-table th[scope="row"] {
+  background-color: var(--color-surface);
+  font-weight: 700;
+  text-align: left;
+}
+
+/* Отключение резких анимаций и плавного скролла для пользователей с чувствительностью */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

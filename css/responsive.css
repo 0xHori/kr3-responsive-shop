@@ -1,0 +1,368 @@
+/* ==========================================================================
+   Адаптивные стили для контрольной работы №3 (kr3-responsive-shop)
+   Подход: Mobile First.
+   Базовые правила рассчитаны на экраны мобильных телефонов.
+   Расширения для планшетов и desktop задаются через min-width медиазапросы.
+   ========================================================================== */
+
+/* 1. Базовый сброс и защита от горизонтального переполнения */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 20px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img,
+picture,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 2. Адаптивные контейнеры */
+.site-header__inner,
+.breadcrumbs,
+.section,
+.catalog-layout,
+.order-layout,
+.aside-info,
+.success-message {
+  width: min(100% - 32px, var(--container-width, 1100px));
+  margin-inline: auto;
+}
+
+/* 3. Шапка и навигация: Mobile First */
+.site-header {
+  position: static; /* На мобильных оставляем статичной для экономии места */
+}
+
+.site-header__inner {
+  padding: var(--space-md) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.site-nav {
+  width: 100%;
+}
+
+.site-nav__list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: var(--space-xs);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.site-nav__item {
+  width: 100%;
+  text-align: center;
+}
+
+.site-nav__link {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 15px;
+  border-radius: var(--radius-sm);
+}
+
+/* 4. Hero-блок */
+.hero {
+  min-height: auto;
+  padding: clamp(40px, 8vw, 80px) 16px;
+}
+
+.hero__content {
+  padding: 0;
+  max-width: 680px;
+}
+
+.hero__title {
+  font-size: clamp(26px, 7vw, 48px);
+  line-height: 1.2;
+}
+
+.hero__text {
+  font-size: clamp(15px, 3.5vw, 18px);
+}
+
+.hero__actions {
+  flex-direction: column;
+  width: 100%;
+  max-width: 320px;
+  margin-inline: auto;
+}
+
+.hero__actions .button {
+  width: 100%;
+}
+
+/* 5. Карточки товаров и сетка */
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+.product-card {
+  min-width: 0;
+}
+
+.product-card__image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Квадратный конверт для виниловой пластинки */
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+}
+
+.product-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-fast, 0.2s ease);
+}
+
+.product-card:hover .product-card__image {
+  transform: scale(1.04);
+}
+
+.product-card__title,
+.product-card__description {
+  overflow-wrap: anywhere;
+}
+
+.product-card__actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.product-card__actions .button {
+  width: 100%;
+}
+
+/* 6. Страница каталога: фильтры и товары */
+.catalog-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "filters" "products";
+  gap: var(--space-lg);
+}
+
+.catalog-filters {
+  grid-area: filters;
+  position: static;
+  width: 100%;
+}
+
+.catalog-products {
+  grid-area: products;
+}
+
+/* 7. Страница товара (product.html) */
+.product-details__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+.product-details__image-wrapper {
+  max-width: 440px;
+  margin-inline: auto;
+  aspect-ratio: 1 / 1;
+}
+
+.product-details__placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-details__actions {
+  flex-direction: column;
+}
+
+.product-details__actions .button {
+  width: 100%;
+}
+
+/* Адаптивная таблица с горизонтальным скроллом */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.product-table {
+  width: 100%;
+  min-width: 540px; /* Фиксированная минимальная ширина для избежания смятия ячеек */
+  margin-top: 0;
+  border: none;
+}
+
+/* 8. Оформление заказа (order.html) и Модальное окно */
+.order-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+.order-form__input,
+.order-form__select,
+.order-form__textarea {
+  min-height: 44px; /* Удобный размер для тапа пальцем */
+  font-size: 16px; /* Защита от авто-зума в Safari на iOS */
+}
+
+.order-form__actions {
+  flex-direction: column;
+}
+
+.order-form__actions .button {
+  width: 100%;
+}
+
+.order-dialog {
+  width: min(100% - 24px, 560px);
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
+}
+
+/* 9. Кнопка "Наверх" */
+.scroll-top-button {
+  bottom: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+}
+
+/* ==========================================================================
+   Медиазапрос: Планшеты (min-width: 640px)
+   ========================================================================== */
+@media (min-width: 640px) {
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .product-card__actions {
+    flex-direction: row;
+  }
+
+  .product-card__actions .button {
+    flex: 1;
+  }
+}
+
+/* ==========================================================================
+   Медиазапрос: Планшеты и ноутбуки (min-width: 768px)
+   ========================================================================== */
+@media (min-width: 768px) {
+  html {
+    scroll-padding-top: 90px;
+  }
+
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .site-nav__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: auto;
+  }
+
+  .site-nav__item {
+    width: auto;
+  }
+
+  .site-nav__link {
+    width: auto;
+    display: inline-block;
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .hero__actions {
+    flex-direction: row;
+    max-width: none;
+  }
+
+  .hero__actions .button {
+    width: auto;
+  }
+
+  .product-details__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+  }
+
+  .product-details__actions {
+    flex-direction: row;
+  }
+
+  .product-details__actions .button {
+    width: auto;
+  }
+
+  .order-form__actions {
+    flex-direction: row;
+  }
+
+  .order-form__actions .button {
+    width: auto;
+  }
+
+  .scroll-top-button {
+    bottom: 24px;
+    right: 24px;
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* ==========================================================================
+   Медиазапрос: Десктоп (min-width: 1024px)
+   ========================================================================== */
+@media (min-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .catalog-layout {
+    grid-template-columns: 260px 1fr;
+    grid-template-areas: "filters products";
+  }
+
+  .catalog-filters {
+    position: sticky;
+    top: 90px;
+    align-self: start;
+  }
+
+  .order-layout {
+    grid-template-columns: 2fr 1fr;
+  }
+}

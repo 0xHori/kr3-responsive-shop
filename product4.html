@@ -4,17 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Пластинка Король и Шут — Будь как дома, Путник… (1997) в интернет-магазине VinylShop. Спецификации и характеристики издания.">
+    <meta name="description"
+        content="Пластинка Король и Шут — Будь как дома, Путник… (1997) в интернет-магазине VinylShop. Спецификации и характеристики издания.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Король и Шут — Будь как дома, Путник… | VinylShop">
-    <meta property="og:description" content="Подробная информация о релизе, жанры и технические параметры винилового издания.">
-    <meta property="og:image" content="images/album-4.jpg">
+    <meta property="og:description"
+        content="Подробная информация о релизе, жанры и технические параметры винилового издания.">
+    <meta property="og:image" content="images/album-4.webp">
     <title>Король и Шут — Будь как дома, Путник… | VinylShop</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body id="top">
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
     <header class="site-header">
         <div class="site-header__inner">
             <a class="site-header__logo" href="index.html">VinylShop</a>
@@ -22,7 +26,8 @@
                 <ul class="site-nav__list">
                     <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
-                    <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="product4.html">Пластинка</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="product4.html"
+                            aria-current="page">Пластинка</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="order.html">Оформить заказ</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
                 </ul>
@@ -30,7 +35,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main">
         <nav class="breadcrumbs" aria-label="Хлебные крошки">
             <a class="breadcrumbs__link" href="index.html">Главная</a>
             <a class="breadcrumbs__link" href="catalog.html">Каталог</a>
@@ -42,8 +47,9 @@
                 <div class="product-details__image-wrapper">
                     <div class="product-details__placeholder">
                         <picture>
-                            <source media="(min-width: 1024px)" srcset="images/album-4.jpg">
-                            <img src="images/album-4.jpg" alt="Обложка пластинки Король и Шут — Будь как дома, Путник…" width="500" height="500">
+                            <source media="(min-width: 1024px)" srcset="images/album-4.webp">
+                            <img src="images/album-4.webp" alt="Обложка пластинки Король и Шут — Будь как дома, Путник…"
+                                width="500" height="500">
                         </picture>
                     </div>
                 </div>
@@ -52,7 +58,10 @@
                     <h1 class="product-details__title">Будь как дома, Путник…</h1>
                     <p class="product-details__artist"><strong>Исполнитель:</strong> Король и Шут</p>
                     <p class="product-details__description">
-                        Альбом «Будь как дома, Путник…» вышел 18 декабря 1997 года и стал одной из визитных карточек группы. Жанр — хоррор-панк с элементами классического панк-рока; в аранжировках слышны фолк-роковые интонации, а сюжетные тексты построены вокруг мистики, городского фольклора и театральных персонажей.
+                        Альбом «Будь как дома, Путник…» вышел 18 декабря 1997 года и стал одной из визитных карточек
+                        группы. Жанр — хоррор-панк с элементами классического панк-рока; в аранжировках слышны
+                        фолк-роковые интонации, а сюжетные тексты построены вокруг мистики, городского фольклора и
+                        театральных персонажей.
                     </p>
                     <p class="product-details__price">Цена: 4 600 руб.</p>
                     <div class="product-details__actions">
@@ -76,31 +85,31 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="product-table__cell">Жанр</td>
+                                <th scope="row" class="product-table__cell">Жанр</th>
                                 <td class="product-table__cell">Хоррор-панк, панк-рок, фолк-рок</td>
                             </tr>
                             <tr>
-                                <td class="product-table__cell">Лейбл</td>
+                                <th scope="row" class="product-table__cell">Лейбл</th>
                                 <td class="product-table__cell">Переиздание на 180-граммовом виниле</td>
                             </tr>
                             <tr>
-                                <td class="product-table__cell">Формат носителя</td>
+                                <th scope="row" class="product-table__cell">Формат носителя</th>
                                 <td class="product-table__cell">LP (12"), 180-Gram Heavyweight Vinyl</td>
                             </tr>
                             <tr>
-                                <td class="product-table__cell">Скорость вращения</td>
+                                <th scope="row" class="product-table__cell">Скорость вращения</th>
                                 <td class="product-table__cell">33 ⅓ RPM</td>
                             </tr>
                             <tr>
-                                <td class="product-table__cell">Страна производства</td>
+                                <th scope="row" class="product-table__cell">Страна производства</th>
                                 <td class="product-table__cell">Россия</td>
                             </tr>
                             <tr>
-                                <td class="product-table__cell">Комплектация</td>
+                                <th scope="row" class="product-table__cell">Комплектация</th>
                                 <td class="product-table__cell">Конверт с внутренним защитным пакетом, вкладка</td>
                             </tr>
                             <tr>
-                                <td class="product-table__cell">Состояние</td>
+                                <th scope="row" class="product-table__cell">Состояние</th>
                                 <td class="product-table__cell">Mint (Новый, в заводской упаковке)</td>
                             </tr>
                         </tbody>
@@ -115,7 +124,7 @@
         <p>Дисциплина: Фронтенд и бэкенд разработка</p>
     </footer>
 
-    <a class="scroll-top-button" href="#top" aria-label="Вернуться наверх страницы">&#8593;</a>
+    <a class="scroll-top-button" href="#top" aria-label="Вернуться в начало страницы">&#8593;</a>
 </body>
 
 </html>

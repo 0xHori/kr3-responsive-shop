@@ -4,26 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Магазин виниловых пластинок VinylShop. Коллекционные альбомы русских исполнителей: рок, панк, рэп и поп-музыка.">
+    <meta name="description"
+        content="Магазин виниловых пластинок VinylShop. Коллекционные альбомы русских исполнителей: рок, панк, рэп и поп-музыка.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="VinylShop — Магазин виниловых пластинок">
-    <meta property="og:description" content="Купить виниловые пластинки с доставкой. Русский рок, панк, рэп и эстрада, а также современные релизы.">
-    <meta property="og:image" content="images/album-1.jpg">
+    <meta property="og:description"
+        content="Купить виниловые пластинки с доставкой. Русский рок, панк, рэп и эстрада, а также современные релизы.">
+    <meta property="og:image" content="images/album-1.webp">
     <title>VinylShop — Магазин виниловых пластинок</title>
-    <!-- Базовые стили КР №1 -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- Адаптивные стили КР №3 (подключаются строго после style.css) -->
     <link rel="stylesheet" href="css/responsive.css">
     <script src="js/main.js" defer></script>
 </head>
 
 <body id="top">
+    <!-- Ссылка пропуска к основному контенту для клавиатурной доступности -->
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
     <header class="site-header">
         <div class="site-header__inner">
             <a class="site-header__logo" href="index.html">VinylShop</a>
             <nav class="site-nav" aria-label="Основная навигация">
                 <ul class="site-nav__list">
-                    <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="index.html">Главная</a></li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link site-nav__link--active" href="index.html"
+                            aria-current="page">Главная</a>
+                    </li>
                     <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="product1.html">Пластинка</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="order.html">Оформить заказ</a></li>
@@ -33,13 +39,14 @@
         </div>
     </header>
 
-    <main>
+    <main id="main">
         <section class="hero">
             <div class="hero__overlay"></div>
             <div class="hero__content">
                 <h1 class="hero__title">Мир теплого аналогового звука</h1>
                 <p class="hero__text">
-                    Коллекционный винил: от классики русского рока и панка до современных рэп- и поп-релизов. Быстрая доставка по всей России.
+                    Коллекционный винил: от классики русского рока и панка до современных рэп- и поп-релизов. Быстрая
+                    доставка по всей России.
                 </p>
                 <div class="hero__actions">
                     <a class="button button--primary" href="#popular">Хиты продаж</a>
@@ -54,7 +61,7 @@
                 <li>Только официальные издания и лицензионные релизы российских и зарубежных исполнителей;</li>
                 <li>Профессиональная бережная упаковка с защитой углов конверта;</li>
                 <li>Полный контроль качества перед отправкой покупателю;</li>
-                <li>Адаптивная верстка и удобный заказ с любого смартфона.</li>
+                <li>Адаптивная верстка и доступный интерфейс для любых устройств.</li>
             </ul>
         </section>
 
@@ -65,14 +72,18 @@
                 <article class="product-card product-card--featured">
                     <span class="product-card__badge product-card__badge--featured">Хит</span>
                     <div class="product-card__image-wrapper">
-                        <img class="product-card__image" src="images/album-1.jpg" alt="Кишлак — СХИК2" loading="lazy" width="400" height="400">
+                        <img class="product-card__image" src="images/album-1.webp"
+                            alt="Обложка виниловой пластинки Кишлак — СХИК2" loading="lazy" width="400" height="400">
                     </div>
                     <h3 class="product-card__title">СХИК2</h3>
-                    <p class="product-card__description">Кишлак (2023). Новый виток панк-рэпа: эмо-рэп, альтернативный рок и панк на одном виниле.</p>
+                    <p class="product-card__description">Кишлак (2023). Новый виток панк-рэпа: эмо-рэп, альтернативный
+                        рок и панк на одном виниле.</p>
                     <p class="product-card__price">Цена: 4 200 руб.</p>
                     <div class="product-card__actions">
-                        <a class="button button--secondary" href="product1.html">Подробнее</a>
-                        <button class="button button--primary product-card__button" type="button" data-product="Кишлак — СХИК2">
+                        <a class="button button--secondary" href="product1.html"
+                            aria-label="Подробнее об альбоме Кишлак — СХИК2">Подробнее</a>
+                        <button class="button button--primary product-card__button" type="button"
+                            data-product="Кишлак — СХИК2">
                             Заказать
                         </button>
                     </div>
@@ -82,14 +93,19 @@
                 <article class="product-card product-card--discount">
                     <span class="product-card__badge product-card__badge--discount">-15%</span>
                     <div class="product-card__image-wrapper">
-                        <img class="product-card__image" src="images/album-2.jpg" alt="Бесплатный Автобус — Мы убили сон" loading="lazy" width="400" height="400">
+                        <img class="product-card__image" src="images/album-2.webp"
+                            alt="Обложка виниловой пластинки Бесплатный Автобус — Мы убили сон" loading="lazy"
+                            width="400" height="400">
                     </div>
                     <h3 class="product-card__title">Мы убили сон</h3>
-                    <p class="product-card__description">Бесплатный Автобус (2021). Меланхоличный альбом на стыке альтернативы и поп-музыки.</p>
+                    <p class="product-card__description">Бесплатный Автобус (2021). Меланхоличный альбом на стыке
+                        альтернативы и поп-музыки.</p>
                     <p class="product-card__price">Цена: 3 800 руб.</p>
                     <div class="product-card__actions">
-                        <a class="button button--secondary" href="product2.html">Подробнее</a>
-                        <button class="button button--primary product-card__button" type="button" data-product="Бесплатный Автобус — Мы убили сон">
+                        <a class="button button--secondary" href="product2.html"
+                            aria-label="Подробнее об альбоме Бесплатный Автобус — Мы убили сон">Подробнее</a>
+                        <button class="button button--primary product-card__button" type="button"
+                            data-product="Бесплатный Автобус — Мы убили сон">
                             Заказать
                         </button>
                     </div>
@@ -99,14 +115,19 @@
                 <article class="product-card">
                     <span class="product-card__badge product-card__badge--new">New</span>
                     <div class="product-card__image-wrapper">
-                        <img class="product-card__image" src="images/album-3.jpg" alt="Три дня дождя — Байполар" loading="lazy" width="400" height="400">
+                        <img class="product-card__image" src="images/album-3.webp"
+                            alt="Обложка виниловой пластинки Три дня дождя — Байполар" loading="lazy" width="400"
+                            height="400">
                     </div>
                     <h3 class="product-card__title">Байполар</h3>
-                    <p class="product-card__description">Три дня дождя (2022). Третий студийный альбом группы: альтернативный рок и поп-рок.</p>
+                    <p class="product-card__description">Три дня дождя (2022). Третий студийный альбом группы:
+                        альтернативный рок и поп-рок.</p>
                     <p class="product-card__price">Цена: 5 400 руб.</p>
                     <div class="product-card__actions">
-                        <a class="button button--secondary" href="product3.html">Подробнее</a>
-                        <button class="button button--primary product-card__button" type="button" data-product="Три дня дождя — Байполар">
+                        <a class="button button--secondary" href="product3.html"
+                            aria-label="Подробнее об альбоме Три дня дождя — Байполар">Подробнее</a>
+                        <button class="button button--primary product-card__button" type="button"
+                            data-product="Три дня дождя — Байполар">
                             Заказать
                         </button>
                     </div>
@@ -117,7 +138,8 @@
         <aside class="aside-info">
             <h2>Клуб любителей винила</h2>
             <p>
-                Покупая пластинки в нашем магазине, вы получаете бонусные баллы на покупку антистатических конвертов и средств ухода за иглами звукоснимателей.
+                Покупая пластинки в нашем магазине, вы получаете бонусные баллы на покупку антистатических конвертов и
+                средств ухода за иглами звукоснимателей.
             </p>
         </aside>
     </main>
@@ -135,18 +157,22 @@
 
             <div class="order-form__field">
                 <label class="order-form__label" for="order-name">Имя</label>
-                <input class="order-form__input" id="order-name" name="name" type="text" placeholder="Введите ваше имя" minlength="2" autocomplete="given-name" required>
+                <input class="order-form__input" id="order-name" name="name" type="text" placeholder="Введите ваше имя"
+                    minlength="2" autocomplete="given-name" required>
             </div>
 
             <div class="order-form__field">
                 <label class="order-form__label" for="order-email">E-mail</label>
-                <input class="order-form__input" id="order-email" name="email" type="email" placeholder="example@mail.ru" autocomplete="email" required>
+                <input class="order-form__input" id="order-email" name="email" type="email"
+                    placeholder="example@mail.ru" autocomplete="email" required>
             </div>
 
             <div class="order-form__field">
                 <label class="order-form__label" for="order-phone">Телефон</label>
-                <input class="order-form__input" id="order-phone" name="phone" type="tel" inputmode="tel" placeholder="+7 (900) 000-00-00" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" required>
-                <small class="order-form__help">Формат: +7 (900) 000-00-00</small>
+                <input class="order-form__input" id="order-phone" name="phone" type="tel" inputmode="tel"
+                    placeholder="+7 (900) 000-00-00" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" required
+                    aria-describedby="order-phone-help">
+                <small class="order-form__help" id="order-phone-help">Формат: +7 (900) 000-00-00</small>
             </div>
 
             <div class="order-form__field">
@@ -161,7 +187,8 @@
 
             <div class="order-form__field">
                 <label class="order-form__label" for="order-comment">Комментарий к доставке</label>
-                <textarea class="order-form__textarea" id="order-comment" name="comment" rows="3" placeholder="Адрес доставки или пожелания"></textarea>
+                <textarea class="order-form__textarea" id="order-comment" name="comment" rows="3"
+                    placeholder="Адрес доставки или пожелания"></textarea>
             </div>
 
             <div class="order-form__field order-form__field--checkbox">
@@ -172,17 +199,18 @@
             </div>
 
             <div class="order-form__actions">
-                <button class="button button--secondary" type="button" id="close-order-dialog">Закрыть</button>
+                <button class="button button--secondary" type="button" id="close-order-dialog"
+                    aria-label="Закрыть модальное окно">Закрыть</button>
                 <button class="button button--primary" type="submit">Подтвердить заказ</button>
             </div>
         </form>
     </dialog>
 
-    <p class="success-message" id="success-message" hidden>
+    <p class="success-message" id="success-message" role="status" hidden>
         Заявка успешно оформлена! Наш консультант свяжется с вами для уточнения деталей.
     </p>
 
-    <a class="scroll-top-button" href="#top" aria-label="Вернуться наверх страницы">&#8593;</a>
+    <a class="scroll-top-button" href="#top" aria-label="Вернуться в начало страницы">&#8593;</a>
 </body>
 
 </html>

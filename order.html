@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Оформление заказа виниловых пластинок в интернет-магазине VinylShop. Быстрая доставка и бережная упаковка.">
+    <meta name="description"
+        content="Оформление заказа виниловых пластинок в интернет-магазине VinylShop. Быстрая доставка и бережная упаковка.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Оформление заказа — VinylShop">
     <meta property="og:description" content="Заполните форму заказа виниловых пластинок и аксессуаров.">
@@ -15,6 +16,8 @@
 </head>
 
 <body id="top">
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
     <header class="site-header">
         <div class="site-header__inner">
             <a class="site-header__logo" href="index.html">VinylShop</a>
@@ -23,14 +26,15 @@
                     <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="product1.html">Пластинка</a></li>
-                    <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="order.html">Оформить заказ</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="order.html"
+                            aria-current="page">Оформить заказ</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
+    <main id="main">
         <nav class="breadcrumbs" aria-label="Хлебные крошки">
             <a class="breadcrumbs__link" href="index.html">Главная</a>
             <span class="breadcrumbs__current">Оформление заказа</span>
@@ -46,18 +50,22 @@
                 <form class="order-form" id="page-order-form" action="#" method="post" novalidate>
                     <div class="order-form__field">
                         <label class="order-form__label" for="page-order-name">Ваше имя и фамилия</label>
-                        <input class="order-form__input" id="page-order-name" name="name" type="text" placeholder="Иван Иванов" minlength="2" autocomplete="name" required>
+                        <input class="order-form__input" id="page-order-name" name="name" type="text"
+                            placeholder="Иван Иванов" minlength="2" autocomplete="name" required>
                     </div>
 
                     <div class="order-form__field">
                         <label class="order-form__label" for="page-order-email">Электронная почта</label>
-                        <input class="order-form__input" id="page-order-email" name="email" type="email" placeholder="example@mail.ru" autocomplete="email" required>
+                        <input class="order-form__input" id="page-order-email" name="email" type="email"
+                            placeholder="example@mail.ru" autocomplete="email" required>
                     </div>
 
                     <div class="order-form__field">
                         <label class="order-form__label" for="page-order-phone">Номер телефона</label>
-                        <input class="order-form__input" id="page-order-phone" name="phone" type="tel" inputmode="tel" placeholder="+7 (900) 000-00-00" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" required>
-                        <small class="order-form__help">Формат: +7 (900) 000-00-00</small>
+                        <input class="order-form__input" id="page-order-phone" name="phone" type="tel" inputmode="tel"
+                            placeholder="+7 (900) 000-00-00" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" required
+                            aria-describedby="page-order-phone-help">
+                        <small class="order-form__help" id="page-order-phone-help">Формат: +7 (900) 000-00-00</small>
                     </div>
 
                     <div class="order-form__field">
@@ -80,12 +88,14 @@
 
                     <div class="order-form__field">
                         <label class="order-form__label" for="page-order-comment">Адрес доставки и пожелания</label>
-                        <textarea class="order-form__textarea" id="page-order-comment" name="comment" rows="4" placeholder="Город, улица, дом, квартира или комментарии к упаковке"></textarea>
+                        <textarea class="order-form__textarea" id="page-order-comment" name="comment" rows="4"
+                            placeholder="Город, улица, дом, квартира или комментарии к упаковке"></textarea>
                     </div>
 
                     <div class="order-form__field order-form__field--checkbox">
                         <label class="order-form__checkbox-label">
-                            <input class="order-form__checkbox" id="page-order-agreement" name="agreement" type="checkbox" required>
+                            <input class="order-form__checkbox" id="page-order-agreement" name="agreement"
+                                type="checkbox" required>
                             Я подтверждаю согласие на обработку персональных данных
                         </label>
                     </div>
@@ -111,7 +121,7 @@
             </aside>
         </div>
 
-        <p class="success-message" id="page-success-message" hidden>
+        <p class="success-message" id="page-success-message" role="status" hidden>
             Ваш заказ успешно принят! Номер отправления поступит в SMS и на e-mail.
         </p>
     </main>
@@ -121,7 +131,7 @@
         <p>Дисциплина: Фронтенд и бэкенд разработка</p>
     </footer>
 
-    <a class="scroll-top-button" href="#top" aria-label="Вернуться наверх страницы">&#8593;</a>
+    <a class="scroll-top-button" href="#top" aria-label="Вернуться в начало страницы">&#8593;</a>
 </body>
 
 </html>

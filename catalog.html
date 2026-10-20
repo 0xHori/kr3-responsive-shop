@@ -15,13 +15,16 @@
 </head>
 
 <body id="top">
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
     <header class="site-header">
         <div class="site-header__inner">
             <a class="site-header__logo" href="index.html">VinylShop</a>
             <nav class="site-nav" aria-label="Основная навигация">
                 <ul class="site-nav__list">
                     <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
-                    <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="catalog.html">Каталог</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="catalog.html"
+                            aria-current="page">Каталог</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="product1.html">Пластинка</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="order.html">Оформить заказ</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
@@ -30,7 +33,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main">
         <nav class="breadcrumbs" aria-label="Хлебные крошки">
             <a class="breadcrumbs__link" href="index.html">Главная</a>
             <span class="breadcrumbs__current">Каталог</span>
@@ -68,10 +71,12 @@
                     <fieldset class="filters-form__group">
                         <legend class="filters-form__legend">Цена (руб.)</legend>
                         <label class="filters-form__label" for="price-from">От</label>
-                        <input class="filters-form__input" id="price-from" name="price-from" type="number" min="0" placeholder="1000">
+                        <input class="filters-form__input" id="price-from" name="price-from" type="number" min="0"
+                            placeholder="1000">
 
                         <label class="filters-form__label" for="price-to">До</label>
-                        <input class="filters-form__input" id="price-to" name="price-to" type="number" min="0" placeholder="10000">
+                        <input class="filters-form__input" id="price-to" name="price-to" type="number" min="0"
+                            placeholder="10000">
                     </fieldset>
 
                     <button class="button button--primary" type="submit">Применить фильтр</button>
@@ -85,14 +90,17 @@
                     <article class="product-card product-card--featured">
                         <span class="product-card__badge product-card__badge--featured">Хит</span>
                         <div class="product-card__image-wrapper">
-                            <img class="product-card__image" src="images/album-1.jpg" alt="Кишлак — СХИК2" loading="lazy">
+                            <img class="product-card__image" src="images/album-1.webp"
+                                alt="Обложка альбома Кишлак — СХИК2" loading="lazy">
                         </div>
                         <h3 class="product-card__title">СХИК2</h3>
                         <p class="product-card__description">Кишлак (2023) — Поп-рэп / Панк</p>
                         <p class="product-card__price">Цена: 4 200 руб.</p>
                         <div class="product-card__actions">
-                            <a class="button button--secondary" href="product1.html">Подробнее</a>
-                            <button class="button button--primary product-card__button" type="button" data-product="Кишлак — СХИК2">
+                            <a class="button button--secondary" href="product1.html"
+                                aria-label="Подробнее об альбоме Кишлак — СХИК2">Подробнее</a>
+                            <button class="button button--primary product-card__button" type="button"
+                                data-product="Кишлак — СХИК2">
                                 Заказать
                             </button>
                         </div>
@@ -102,14 +110,17 @@
                     <article class="product-card product-card--discount">
                         <span class="product-card__badge product-card__badge--discount">-15%</span>
                         <div class="product-card__image-wrapper">
-                            <img class="product-card__image" src="images/album-2.jpg" alt="Бесплатный Автобус — Мы убили сон" loading="lazy">
+                            <img class="product-card__image" src="images/album-2.webp"
+                                alt="Обложка альбома Бесплатный Автобус — Мы убили сон" loading="lazy">
                         </div>
                         <h3 class="product-card__title">Мы убили сон</h3>
                         <p class="product-card__description">Бесплатный Автобус (2021) — Альтернатива / Поп</p>
                         <p class="product-card__price">Цена: 3 800 руб.</p>
                         <div class="product-card__actions">
-                            <a class="button button--secondary" href="product2.html">Подробнее</a>
-                            <button class="button button--primary product-card__button" type="button" data-product="Бесплатный Автобус — Мы убили сон">
+                            <a class="button button--secondary" href="product2.html"
+                                aria-label="Подробнее об альбоме Бесплатный Автобус — Мы убили сон">Подробнее</a>
+                            <button class="button button--primary product-card__button" type="button"
+                                data-product="Бесплатный Автобус — Мы убили сон">
                                 Заказать
                             </button>
                         </div>
@@ -119,14 +130,17 @@
                     <article class="product-card">
                         <span class="product-card__badge product-card__badge--new">New</span>
                         <div class="product-card__image-wrapper">
-                            <img class="product-card__image" src="images/album-3.jpg" alt="Три дня дождя — Байполар" loading="lazy">
+                            <img class="product-card__image" src="images/album-3.webp"
+                                alt="Обложка альбома Три дня дождя — Байполар" loading="lazy">
                         </div>
                         <h3 class="product-card__title">Байполар</h3>
                         <p class="product-card__description">Три дня дождя (2022) — Альтернативный рок / Поп-рок</p>
                         <p class="product-card__price">Цена: 5 400 руб.</p>
                         <div class="product-card__actions">
-                            <a class="button button--secondary" href="product3.html">Подробнее</a>
-                            <button class="button button--primary product-card__button" type="button" data-product="Три дня дождя — Байполар">
+                            <a class="button button--secondary" href="product3.html"
+                                aria-label="Подробнее об альбоме Три дня дождя — Байполар">Подробнее</a>
+                            <button class="button button--primary product-card__button" type="button"
+                                data-product="Три дня дождя — Байполар">
                                 Заказать
                             </button>
                         </div>
@@ -135,14 +149,17 @@
                     <!-- Товар 4 -->
                     <article class="product-card">
                         <div class="product-card__image-wrapper">
-                            <img class="product-card__image" src="images/album-4.jpg" alt="Король и Шут — Будь как дома, Путник…" loading="lazy">
+                            <img class="product-card__image" src="images/album-4.webp"
+                                alt="Обложка альбома Король и Шут — Будь как дома, Путник…" loading="lazy">
                         </div>
                         <h3 class="product-card__title">Будь как дома, Путник…</h3>
                         <p class="product-card__description">Король и Шут (1997) — Хоррор-панк / Фолк-рок</p>
                         <p class="product-card__price">Цена: 4 600 руб.</p>
                         <div class="product-card__actions">
-                            <a class="button button--secondary" href="product4.html">Подробнее</a>
-                            <button class="button button--primary product-card__button" type="button" data-product="Король и Шут — Будь как дома, Путник…">
+                            <a class="button button--secondary" href="product4.html"
+                                aria-label="Подробнее об альбоме Король и Шут — Будь как дома, Путник…">Подробнее</a>
+                            <button class="button button--primary product-card__button" type="button"
+                                data-product="Король и Шут — Будь как дома, Путник…">
                                 Заказать
                             </button>
                         </div>
@@ -151,14 +168,17 @@
                     <!-- Товар 5 -->
                     <article class="product-card">
                         <div class="product-card__image-wrapper">
-                            <img class="product-card__image" src="images/album-5.jpg" alt="Noize MC — Новый альбом" loading="lazy">
+                            <img class="product-card__image" src="images/album-5.webp"
+                                alt="Обложка альбома Noize MC — Новый альбом" loading="lazy">
                         </div>
                         <h3 class="product-card__title">Новый альбом</h3>
                         <p class="product-card__description">Noize MC (2012) — Рэп-рок / Альтернатива</p>
                         <p class="product-card__price">Цена: 3 900 руб.</p>
                         <div class="product-card__actions">
-                            <a class="button button--secondary" href="product5.html">Подробнее</a>
-                            <button class="button button--primary product-card__button" type="button" data-product="Noize MC — Новый альбом">
+                            <a class="button button--secondary" href="product5.html"
+                                aria-label="Подробнее об альбоме Noize MC — Новый альбом">Подробнее</a>
+                            <button class="button button--primary product-card__button" type="button"
+                                data-product="Noize MC — Новый альбом">
                                 Заказать
                             </button>
                         </div>
@@ -167,14 +187,17 @@
                     <!-- Товар 6 -->
                     <article class="product-card">
                         <div class="product-card__image-wrapper">
-                            <img class="product-card__image" src="images/album-6.jpg" alt="Юрий Шатунов — Детство" loading="lazy">
+                            <img class="product-card__image" src="images/album-6.webp"
+                                alt="Обложка альбома Юрия Шатунова — Детство" loading="lazy">
                         </div>
                         <h3 class="product-card__title">Детство</h3>
                         <p class="product-card__description">Юрий Шатунов (1991) — Поп / Эстрада</p>
                         <p class="product-card__price">Цена: 4 500 руб.</p>
                         <div class="product-card__actions">
-                            <a class="button button--secondary" href="product6.html">Подробнее</a>
-                            <button class="button button--primary product-card__button" type="button" data-product="Юрий Шатунов — Детство">
+                            <a class="button button--secondary" href="product6.html"
+                                aria-label="Подробнее об альбоме Юрия Шатунова — Детство">Подробнее</a>
+                            <button class="button button--primary product-card__button" type="button"
+                                data-product="Юрий Шатунов — Детство">
                                 Заказать
                             </button>
                         </div>
@@ -197,39 +220,45 @@
 
             <div class="order-form__field">
                 <label class="order-form__label" for="catalog-order-name">Имя</label>
-                <input class="order-form__input" id="catalog-order-name" name="name" type="text" placeholder="Введите ваше имя" minlength="2" autocomplete="given-name" required>
+                <input class="order-form__input" id="catalog-order-name" name="name" type="text"
+                    placeholder="Введите ваше имя" minlength="2" autocomplete="given-name" required>
             </div>
 
             <div class="order-form__field">
                 <label class="order-form__label" for="catalog-order-email">E-mail</label>
-                <input class="order-form__input" id="catalog-order-email" name="email" type="email" placeholder="example@mail.ru" autocomplete="email" required>
+                <input class="order-form__input" id="catalog-order-email" name="email" type="email"
+                    placeholder="example@mail.ru" autocomplete="email" required>
             </div>
 
             <div class="order-form__field">
                 <label class="order-form__label" for="catalog-order-phone">Телефон</label>
-                <input class="order-form__input" id="catalog-order-phone" name="phone" type="tel" inputmode="tel" placeholder="+7 (900) 000-00-00" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" required>
-                <small class="order-form__help">Формат: +7 (900) 000-00-00</small>
+                <input class="order-form__input" id="catalog-order-phone" name="phone" type="tel" inputmode="tel"
+                    placeholder="+7 (900) 000-00-00" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" required
+                    aria-describedby="catalog-order-phone-help">
+                <small class="order-form__help" id="catalog-order-phone-help">Формат: +7 (900) 000-00-00</small>
             </div>
 
             <div class="order-form__field order-form__field--checkbox">
                 <label class="order-form__checkbox-label">
-                    <input class="order-form__checkbox" id="catalog-order-agreement" name="agreement" type="checkbox" required>
+                    <input class="order-form__checkbox" id="catalog-order-agreement" name="agreement" type="checkbox"
+                        required>
                     Я согласен на обработку персональных данных
                 </label>
             </div>
 
             <div class="order-form__actions">
-                <button class="button button--secondary" type="button" id="close-order-dialog">Закрыть</button>
+                <button class="button button--secondary" type="button" id="close-order-dialog"
+                    aria-label="Закрыть модальное окно">Закрыть</button>
                 <button class="button button--primary" type="submit">Отправить заявку</button>
             </div>
         </form>
     </dialog>
 
-    <p class="success-message" id="success-message" hidden>
+    <p class="success-message" id="success-message" role="status" hidden>
         Заявка успешно оформлена!
     </p>
 
-    <a class="scroll-top-button" href="#top" aria-label="Вернуться наверх страницы">&#8593;</a>
+    <a class="scroll-top-button" href="#top" aria-label="Вернуться в начало страницы">&#8593;</a>
 </body>
 
 </html>
